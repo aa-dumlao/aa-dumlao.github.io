@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Online Resume</title>
+    <script src="https://kit.fontawesome.com/91f4f48168.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,347;1,347&display=swap');
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        *{
+            font-family: "PT Sans";
+        }
+
+        html{
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            scroll-snap-type: y proximity;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+
+        .welcomelanding {
+            min-height: 100vh;
+            background-color: #2a2a2a;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navside{
+            width: 25%;
+            height: 100vh;
+            float: left;
+            background-color: #f5f5f5;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 5%;
+        }
+
+        .linking{
+            font-size: 20px;
+            margin-bottom: -10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a:link{
+            text-decoration: none;
+            color: #2e2e2e;
+            font-size: 15px;
+        }
+
+        a:active{
+            color: #303030;
+        }
+
+        a:hover{
+            color: #2a2d4a;
+            font-weight: bold;
+        }
+
+        .navcon{
+            height: 100vh;
+            display: flex;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        .contentarea{
+            width: 75%;
+            float: right;
+            scroll-snap-type: y proximity;
+            overflow-y: scroll;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 5%;
+            scroll-behavior: smooth;
+        }
+
+        .infopage{
+            display: flex;
+            height:100vh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            background-color: #f5f5f5;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 5%;
+        }
+
+        h1{
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        h2{
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        .home-photo {
+            clip-path: circle();
+            position: float;
+            margin-top: 45px;
+            margin-left: 40px;
+            transition: all .4s ease-in-out;
+        }
+
+        .home-photo:hover{
+            scale: 1.15;
+            transition: all .5s ease-in-out;
+        }
+
+        .home-name{
+            font-size: 45px;
+            margin-left: 15px;
+            margin-top: 60px;
+        }
+
+        .home-meDetails{
+            margin-left: 20px;
+            margin-top: -10px;
+
+        }
+
+        .home-info{
+            margin-left: -180px;
+            margin-top: 110px;
+        }
+
+        .home-infoDetails{
+            margin-top: -30px;
+            margin-left: 20px;
+
+        }
+
+        .contact-phoneIcon {
+            height:5vh;
+            margin-top: 65px;
+            margin-left: 40px;
+        }
+
+        .contact-header{
+            font-size: 35px;
+            margin-top: 62px;
+            margin-left: 18px;
+            font-weight: bold;
+        }
+
+        .contact-details{
+            margin-top: 130px;
+            margin-left: -80px;
+        }
+
+        .contact-socialIcons{
+            position: float;
+            width: 20vh;
+        }
+
+        .contact-socialTags {
+            position: float;
+            margin-top: -58px;
+            margin-left: 50px;
+        }
+
+        .education-header{
+            margin-top: 50px;
+            margin-left: 65px;
+        }
+
+        .education-details{
+            margin-left: 120px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="welcomelanding">
+        <div>
+            <p style="font-size: 75px; color: white; margin-left: -40px;"><b>Hello there!</b></p>
+        </div>
+        <div style="margin-top: 225px; margin-left:-340px; color: white;">
+            <p style="font-family: 'Open Sans'; font-size: 18px;">Scroll down to know more about me</p>
+        </div>
+
+        <!-- welcome page-->
+    </div>
+
+    <div class="navcon">
+        <!-- Main page for resume -->
+        <div class="navside">
+            <!-- Nav Side -->
+            <p style="font-size: 25px; margin-left: 14px;"><b>Andrei Dumlao</b></p>
+            <p style="font-family: 'Open Sans'; font-size: 22px; margin-left: 24px; margin-top: -25px;">Le Résumé</p>
+            <ul>
+                <li><a href="#home"><p  class="linking">Home</p></a></li>
+                <li><a href="#contact" class="linking"><p  class="linking">Contact Information</p></a></li>
+                <li><a href="#education" class="linking"><p  class="linking">Education</p></a></li>
+                <li><a href="#work" class="linking"><p  class="linking">Work Experience</p></a></li>
+                <li><a href="#skills" class="linking"><p  class="linking">Skills</p></a></li>
+                <li><a href="#awards" class="linking"><p  class="linking">Awards</p></a></li>
+            </ul>
+        </div>
+
+        <div class="contentarea">
+            <!-- content page-->
+
+            <div class="infopage" id="home">
+                <!-- individual info pages -->
+                 <div>
+                    <img src="https://drive.google.com/thumbnail?id=1tNalUwY2CeTx_Cqm8ISdH15p3Q3GX-rf&sz=w2162" width="200" height="200" alt="Andrei's Casual Photo" class="home-photo"></img>
+                </div>
+                <div>
+                    <p class="home-name"><b>DUMLAO</b> Andrei Sean Vesper M.</p>
+                    <p class="home-meDetails">A 19 year old tech-enthusiast and an aspiring businessman with the goal of </br> achieving the best version that one can be each day.</p>
+                    <div class="home-info">
+                        <h1 class="home-infoHeader">ABOUT ME</h1>
+                        <div class="home-infoDetails">
+                            <p>
+                            </br>
+                                I do a variety of hobbies in my free time which includes coding, gaming, outdoor cycling, </br> playing basketball,  electronics, capturing photos and videos, and others. </br></br>
+                                I believe in the quote that goes <i>"Nothing is impossible"</i> </br></br>
+                                I enjoy living my life!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="infopage" id="contact">
+                <!-- individual info pages -->
+                <div class="contact-phoneIcon">
+                    <i class="fa-solid fa-phone fa-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="contact-header">CONTACT</h1>
+                </div>
+                <div class="contact-details">
+                    <h2>PHONE NUMBER</h2>
+                    <p style="margin-left: 20px">+63 9-- --- ---- </p>
+                    <p style="margin-left: 20px">+63 9-- --- ----</p>
+
+                    <h2>EMAIL</h2>
+                    <p style="margin-left: 20px">andreiseanvesper.dumlao@uap.asia</p>
+                    <p style="margin-left: 20px">andrei.dumlao.official@gmail.com</p>
+
+                    <h2>SOCIALS</h2>
+                    <div class="contact-socialIcons">
+                        <i class="fa-brands fa-facebook-messenger fa-xl style="color: #121212;"></i> / <i class="fa-brands fa-instagram fa-xl style="color: #121212;"></i>
+                        </br>
+                        </br>
+                        <i class="fa-brands fa-linkedin fa-xl" style="color: #121212;"></i>
+                    </div>
+                    <div class="contact-socialTags">
+                        <p style="margin-left: 20px; margin-top: -10px;">@aandrei.dumlao</p>
+                        <p style="margin-left: 20px; margin-top: -10px;">www.linkedin.com/in/aandrei-dumlao</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infopage" id="education">
+                <div>
+                    <h1 class="education-header">EDUCATION</h1>
+
+                    <div class="education-details">
+                        <h2>ELEMENTARY - Our Lady of Perpetual Help School</h2>
+                        <p style="margin-left: 20px">Class Valedictorian</p>
+                        <p style="margin-left: 20px">Consitent Honor Student</p>
+
+                        <h2>HIGH SCHOOL - Pasig City Science High School</h2>
+                        <p style="margin-left: 20px">Consitent Honor Student</p>
+
+                        <h2>JUNIOR COLLEGE (SHS) - University of Asia and the Pacific</h2>
+                        <p style="margin-left: 20px">Master of Arts in Multimedia and Entertainment Management (HUMMS strand)</p>
+                        <p style="margin-left: 20px">2x Unitas Awardee</p>
+                        <p style="margin-left: 20px">Consitent Dean's Lister and President's Lister</p>
+                        <p style="margin-left: 20px">Scholar</p>
+
+                        <h2>COLLEGE (SHS) - University of Asia and the Pacific</h2>
+                        <p style="margin-left: 20px">Bachelor of Science in Information Technology</p>
+                        <p style="margin-left: 20px">Scholar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infopage" id="work">
+                <!-- individual info pages -->
+                 <div class="work-content" style="margin-left: 70px;">
+                    <h1 class="work-header">WORK EXPERIENCE</h1>
+
+                    <div class="work-details" style="margin-left: 80px;">
+                        <h2>Happy Panda — 2019-2020</h2>
+                        <p style="margin-left: 20px">Barista, Marketing</p>
+
+                        <h2>PC Building and Consultations — Freelance</h2>
+                        <p style="margin-left: 20px">PC Building from scratch</p>
+
+                        <h2>Media Management Committee — 2022-2023</h2>
+                        <p style="margin-left: 20px">Videographer, Editor</p>
+
+                        <h2>Research Development Committee — 2022-2023</h2>
+                        <p style="margin-left: 20px">Junior Researcher</p>
+
+                        <h2>CTL Production — 2022-Present</h2>
+                        <p style="margin-left: 20px">Take 1 Member</p>
+                        <p style="margin-left: 20px">Director, Cinematographer, Sound, Master Editor, Production Designer, </br> Event Photographer and Videographer, Production Manager, Training Head</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="infopage" id="skills">
+                <div class="skills-content" style="margin-left: 70px;">
+                    <h1 class="skills-header">SKILLS</h1>
+
+                    <div class="skills-details" style="margin-left: 80px;">
+                        <h2>Creative Skills</h2>
+                        <p style="margin-left: 20px">Videography, Photography - Sony A6400, Sony A7SII, Sony fX30, Fujifilm XT100 & 200</p>
+                        <p style="margin-left: 20px">Video Editing and Photo Manipulation - Premiere Pro, Resolve, After Effects, </br> Photoshop, Lightroom</p>
+
+                    </br>
+
+                        <h2>Logical and Tinkering Skills</h2>
+                        <p style="margin-left: 20px">Tech - Electronics, PC Building, Soldering, Coding</p>
+
+                    </br>
+
+                        <h2>Soft Skills</h2>
+                        <p style="margin-left: 20px">Leading, Management, Project Head</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="infopage" id="awards">
+                <div class="awards-content" style="margin-left: 70px;">
+                    <h1 class="awards-header">AWARDS</h1>
+
+                    <div class="awards-details" style="margin-left: 80px;">
+                        <h2>Academic</h2>
+                        <p style="margin-left: 20px">Valedictorian - 2012, 2018</p>
+                        <p style="margin-left: 20px">Consistent Honor Student — 2012-2022</p>
+                        <p style="margin-left: 20px">Consistent Dean's Lister — 2022-Present</p>
+                        <p style="margin-left: 20px">Consistent President's Lister — 2022-Present</p>
+
+                    </br>
+
+                        <h2>Extra-curricular</h2>
+                        <p style="margin-left: 20px">Multi-awarded Campus Journalist — 2016-2018</p>
+                        <p style="margin-left: 20px">Abakoda Coding Olympiad — 2022</p>
+                        <p style="margin-left: 20px">Multi-awarded CTL Production member — 2022-Present</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
